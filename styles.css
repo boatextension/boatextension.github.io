@@ -1,0 +1,707 @@
+/*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap');*/
+/* CSS Import Statements (place at the top of your CSS file) */
+
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Sora */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* Mada */
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap');
+
+/* Instrument Sans */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* General Sans */
+@import url('https://fonts.googleapis.com/css2?family=General+Sans:ital,wght@200..700;1,200..700&display=swap');
+
+/* Figtree */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@300..900;1,300..900&display=swap');
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+   /*margin-bottom: 500px;*/
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /*font-family: "IBM Plex Sans", sans-serif;*/
+  color: #fdfdfd;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  /*background: #111828;*/
+  /*background: #171717;*/
+  background: #000;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.container {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.titles {
+  padding-top: 190px;
+}
+
+.showcase-video {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  margin-bottom: 80px;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 30px 30px, #333 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+  opacity: 0.9;
+  animation: matrixDots 15s linear infinite;
+}
+
+@keyframes matrixDots {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+
+h1 {
+  /*font-family: "Nunito", sans-serif;*/
+  font-family: "Sora", sans-serif;
+  /*font-family: "Mada", sans-serif;*/
+  /*font-family: "Instrument Sans", sans-serif;*/
+  /*font-family: "General Sans", sans-serif;*/
+  /*font-family: "Figtree", sans-serif;*/
+  /*font-family: "Roboto", sans-serif;*/
+  /*font-family: "Raleway", sans-serif;*/
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h2 {
+  /*font-family: "Nunito", sans-serif;*/
+  font-family: "Sora", sans-serif;
+  /*font-family: "Mada", sans-serif;*/
+  /*font-family: "Instrument Sans", sans-serif;*/
+  /*font-family: "General Sans", sans-serif;*/
+  /*font-family: "Figtree", sans-serif;*/
+  /*font-family: "Roboto", sans-serif;*/
+  /*font-family: "Raleway", sans-serif;*/
+
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(145, 145, 156);
+  line-height: 1.4;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url('boat.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 140%;
+  border: 2px solid #fff;
+  transition: all 0.8s ease;
+}
+
+.logo-wrapper:hover .logo {
+  border-color: rgb(4, 28, 52);
+}
+
+.logo-title {
+  color: #fff;
+  font-family: "Sora", sans-serif;
+  font-size: 19px;
+  margin-left: 17px;
+  font-weight: bold;
+  letter-spacing: 1px
+}
+
+.navbar {
+  background: rgba(18, 18, 18, 0.99);
+  padding: 12px 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar-items {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-items li {
+  cursor: pointer;
+}
+
+.navbar-items li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 12px 20px;
+  transition: all 0.5s ease;
+}
+
+.navbar-items li a:hover {
+  background: #6200ee;
+}
+
+.btn-gradient {
+  padding: 14px 22px;
+  display: inline-block;
+  background: linear-gradient(135deg, #6200ee, #8e24aa, #d500f9);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-gradient:hover::before {
+  left: 100%;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  color: #fff !important;
+  background: linear-gradient(135deg, #6200ee, #8e24aa, #d500f9) !important;
+}
+
+.extension-name {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.extension-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 2px;
+  background-color: #6200ee;
+}
+
+.about {
+  background: #000;
+}
+
+.about-content {
+  display: flex;
+  padding: 80px 0;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-content h1 {
+  margin-top: 0;
+}
+
+.about-content h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.about-titles {
+  width: 100%;
+}
+
+.checklist {
+  margin: 20px auto 0;
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(145, 145, 156);
+  font-size: 18px;
+}
+
+.checklist li:last-child {
+  margin-bottom: 0;
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #121212;
+  border: 1px solid #242424;
+  border-radius: 3px;
+  background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3479 7.56384L9.7479 18.1638C9.65402 18.2585 9.52622 18.3117 9.3929 18.3117C9.25958 18.3117 9.13178 18.2585 9.0379 18.1638L3.6479 12.7738C3.55324 12.68 3.5 12.5522 3.5 12.4188C3.5 12.2855 3.55324 12.1577 3.6479 12.0638L4.3479 11.3638C4.44178 11.2692 4.56958 11.2159 4.7029 11.2159C4.83622 11.2159 4.96402 11.2692 5.0579 11.3638L9.3879 15.6938L18.9379 6.14384C19.1357 5.95205 19.4501 5.95205 19.6479 6.14384L20.3479 6.85384C20.4426 6.94772 20.4958 7.07552 20.4958 7.20884C20.4958 7.34216 20.4426 7.46995 20.3479 7.56384Z" fill="white"/></svg>');
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.brokers {
+  background: #000;
+  padding-bottom: 80px;
+}
+.brokers-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Sora", sans-serif;
+  margin-bottom: 30px;
+}
+.broker-logos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.broker-logo {
+  background: #121212;
+  padding: 50px;
+  border: 1px solid #242424;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Sora", sans-serif;
+  text-decoration: none;
+}
+.broker-logo.binolla-logo::after,
+.broker-logo.pocket-option-logo::after {
+  content: 'soon';
+  position: absolute;
+  right: 8px;
+  bottom: 4px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.quotex-logo img {
+  width: 110px;
+  min-width: 110px;
+}
+.pocket-option-logo img {
+  min-width: 163px;
+}
+.binolla-logo img {
+  width: 85px;
+  min-width: 85px;
+}
+.more-soon-logo p {
+  margin-top: 2px;
+  font-size: 17px;
+}
+
+.download {
+  background: rgb(18, 18, 18);
+  padding: 80px;
+}
+
+.download-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.download-title h1 {
+  margin: 0;
+}
+
+.chrome-logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-left: 10px;
+  font-family: "Sora", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.chrome-logo img {
+  max-width: 40px;
+  margin-top: -3px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.download-info {
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  font-family: "Sora", sans-serif;
+  margin-top: 60px;
+}
+
+.download-info a {
+  color: #fff;
+}
+
+.download-info p:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.download-how-to-install {
+  text-align: left;
+  font-family: "Sora", sans-serif;
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: none;
+}
+
+.download-how-to-install ol {
+  padding-left: 24px;
+}
+
+.download-how-to-install ol > li {
+  margin-bottom: 4px;
+}
+
+.download-how-to-install pre {
+  margin: 0;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 14px 22px;
+  display: inline-block;
+  background: #fff;
+  color: #121212;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  color: #fff;
+  background: #6200ee;
+}
+
+.download-buttons .btn-gradient,
+.download-buttons .btn {
+  padding: 20px 32px;
+  font-size: 15px;
+}
+
+.updates-form {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.updates-form-subscribe {
+  background: #121212;
+  border: 1px solid #242424;
+  padding: 30px;
+}
+
+.updates-form-subscribe-cta {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Sora", sans-serif;
+}
+
+.updates-form-subscribe-cta p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.updates-form-subscribe-cta p:last-child {
+  font-size: 18px;
+  color: rgb(145, 145, 156);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.updates-form-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form-get-updates {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 280px;
+  padding: 18px 25px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  font-family: "Sora", sans-serif;
+}
+
+.email-input::placeholder {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Sora", sans-serif;
+}
+
+.email-input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.subscribe-btn {
+  padding: 14px 22px;
+  display: inline-block;
+  background: #fff;
+  color: #121212;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-2px);
+  color: #fff;
+  background: #6200ee;
+}
+
+.form-privacy-text {
+  font-family: "Sora", sans-serif;
+  font-size: 12px;
+  color: #888;
+  opacity: 0.8;
+}
+
+.disclaimer {
+  text-align: left;
+  font-family: "Sora", sans-serif;
+  font-size: 12px;
+  color: #888;
+}
+
+.hr {
+  background: #242424;
+  width: 100%;
+  height: 1px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.copyright {
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1080px) {
+  .broker-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .broker-logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+  .checklist li {
+    font-size: 17px;
+  }
+  .brokers-title {
+    font-size: 19px;
+  }
+  .download-info {
+    font-size: 14px;
+  }
+  .updates-form-subscribe-cta p:first-child {
+    font-size: 19px;
+  }
+  .updates-form-subscribe-cta p:last-child {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .about-image {
+    order: 1;
+  }
+  .download {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .download-title,
+  .download-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .updates-form-subscribe {
+    padding: 40px 25px;
+  }
+  
+  .updates-form-subscribe-cta p:first-child {
+    font-size: 2rem;
+  }
+  
+  #form-get-updates {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .email-input {
+    min-width: unset;
+    margin-bottom: 10px;
+  }
+
+  .broker-logos {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-title {
+    display: none;
+  }
+}
